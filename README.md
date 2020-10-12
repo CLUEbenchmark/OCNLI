@@ -176,20 +176,16 @@ This will generate a file `metrics.json` that should look as follows (where `eva
 
 **trained with OCNLI.train = 50k data points**
 
-Accuracy on *dev* set: mean accuracy across 5 runs (standard
+Accuracy on *dev* / *test* sets: mean accuracy across 5 runs (standard
 deviation).
 
-| majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-|37.4| 56.8 (0.4) | 60.5 (0.4) | 61.8 (0.5) | 74.5 (0.3) | 78.8 (1.0) | 
-
-
-Accuracy on *test* set: mean accuracy across 5 runs (standard deviation). (We will not provide labels for 
+(We will not provide labels for 
 the test set. However, you can submit your results on [CLUE](https://www.cluebenchmarks.com/) to obtain test accuracy. **TODO**)
 
-| majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-|38.1| 55.7 (0.5) | 59.2 (0.5) | 59.8 (0.4) | 72.2 (0.7) | 78.2 (0.7) | 
+| validation data | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| dev  |37.4| 56.8 (0.4) | 60.5 (0.4) | 61.8 (0.5) | 74.5 (0.3) | 78.8 (1.0) | 
+| test |38.1| 55.7 (0.5) | 59.2 (0.5) | 59.8 (0.4) | 72.2 (0.7) | 78.2 (0.7) | 
 
 
 **trained with OCNLI.train.small = 30k data points**
