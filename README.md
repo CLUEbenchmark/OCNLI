@@ -39,6 +39,18 @@ where:
 
 You will only need `sentence1`, `sentence2` and `label` to train and evaluate. 
 
+## Data split
+
+We provide two training sets: 1) OCNLI.train with roughly 50k data points, 2) OCNLI.train.small which is a filtered subset of OCNLI.train with 30k data points.
+We wanted to see the effect of training size and overlapping premises on the results. See our paper for details.
+
+Both training sets should be validated on the same dev and test sets.
+
+## Leaderboard
+
+OCNLI is part of the CLUE benchmark, which will hold a leaderboard [here](https://www.cluebenchmarks.com/nli.html).
+You can submit your results on the test set there. 
+
 ## Baselines Models (quick start)
 
 All the code for reproducing the  baseline models is included in `ocnli/`. To run
@@ -162,7 +174,9 @@ This will generate a file `metrics.json` that should look as follows (where `eva
 
 ### Results
 
-Accuracy on dev set: mean accuracy across 5 runs (standard
+**trained with OCNLI.train = 50k data points**
+
+Accuracy on *dev* set: mean accuracy across 5 runs (standard
 deviation).
 
 | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
@@ -170,13 +184,20 @@ deviation).
 |37.4| 56.8 (0.4) | 60.5 (0.4) | 61.8 (0.5) | 74.5 (0.3) | 78.8 (1.0) | 
 
 
-Accuracy on test set: mean accuracy across 5 runs (standard deviation). (We will not provide labels for 
+Accuracy on *test* set: mean accuracy across 5 runs (standard deviation). (We will not provide labels for 
 the test set. However, you can submit your results on [CLUE](https://www.cluebenchmarks.com/) to obtain test accuracy. **TODO**)
 
 | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |38.1| 55.7 (0.5) | 59.2 (0.5) | 59.8 (0.4) | 72.2 (0.7) | 78.2 (0.7) | 
 
+
+**trained with OCNLI.train.small = 30k data points**
+
+| validation data | BiLSTM | BERT | RoBERTa |
+|:--:|:--:|:--:|:--:|
+| dev  | 58.7 (0.3) | 72.6 (0.9) | 77.4 (1.0) |
+| test | 57.0 (0.9) | 70.3 (0.9) | 76.4 (1.2) | 
 
 ## More details about OCNLI
 
@@ -232,7 +253,6 @@ Leisure Modern medicine and hygiene学说已经解决了过去占据我们免疫
 ## TODO
 
 - set up submission of test results on CLUE
-- a harder data split
 - code for baseline models in Huggingface [Feel free to make a PR]
 
 ## Contributors
