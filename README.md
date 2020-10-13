@@ -6,7 +6,7 @@ We want to emphasize we did not use human/machine translation in creating the da
 Chinese texts are *original* and not translated. 
 
 OCNLI has roughly 50k pairs for training, 3k for development and 3k for test. We only release the test data
-but not its labels. 
+but not its labels. See our [paper](https://arxiv.org/abs/2010.05444) for details. 
 
 OCNLI is part of the [CLUE](https://www.cluebenchmarks.com/) benchmark.
 
@@ -32,7 +32,7 @@ where:
 - sentence1: the premise sentence(s)
 - sentence2: the hypothesis sentence(s)
 - label: majority vote from label0 -- label4. If no majority agreement, the label will be `-`, and this example should be excluded in experiments, same as in SNLI and MNLI (already taken care of in our baseline code)
-- label0 -- label4: 5 annotated labels for the NLI pair. All pairs in dev and test have 5 labels, whereas only a small portion in the training set has 5 label
+- label0 -- label4: 5 annotated labels for the NLI pair. All pairs in dev and test have 5 labels, whereas only a small portion in the training set has 5 labels
 - genre: one of `gov`, `news`, `lit`, `tv` and `phone`
 - prem_id: id for the premise
 - id: overal id
@@ -174,7 +174,7 @@ This will generate a file `metrics.json` that should look as follows (where `eva
 
 ### Results
 
-**trained with OCNLI.train = 50k data points**
+- trained with **OCNLI.train = 50k data points**
 
 Accuracy on *dev* / *test* sets: mean accuracy across 5 runs (standard
 deviation).
@@ -182,18 +182,18 @@ deviation).
 (We will not provide labels for 
 the test set. However, you can submit your results on [CLUE](https://www.cluebenchmarks.com/) to obtain test accuracy. **TODO**)
 
-| validation data | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| dev  |37.4| 56.8 (0.4) | 60.5 (0.4) | 61.8 (0.5) | 74.5 (0.3) | 78.8 (1.0) | 
-| test |38.1| 55.7 (0.5) | 59.2 (0.5) | 59.8 (0.4) | 72.2 (0.7) | 78.2 (0.7) | 
+| validation data | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa | human | 
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| dev  |37.4| 56.8 (0.4) | 60.5 (0.4) | 61.8 (0.5) | 74.5 (0.3) | 78.8 (1.0) | na |
+| test |38.1| 55.7 (0.5) | 59.2 (0.5) | 59.8 (0.4) | 72.2 (0.7) | 78.2 (0.7) | 90.3 |
 
 
-**trained with OCNLI.train.small = 30k data points**
+- trained with **OCNLI.train.small = 30k data points**
 
-| validation data | BiLSTM | BERT | RoBERTa |
-|:--:|:--:|:--:|:--:|
-| dev  | 58.7 (0.3) | 72.6 (0.9) | 77.4 (1.0) |
-| test | 57.0 (0.9) | 70.3 (0.9) | 76.4 (1.2) | 
+| validation data | BiLSTM | BERT | RoBERTa | human | 
+|:--:|:--:|:--:|:--:|:--:|
+| dev  | 58.7 (0.3) | 72.6 (0.9) | 77.4 (1.0) | na |
+| test | 57.0 (0.9) | 70.3 (0.9) | 76.4 (1.2) | 90.3 |
 
 ## More details about OCNLI
 
@@ -275,6 +275,7 @@ Please cite the following paper if you use OCNLI in your research
 	title={OCNLI: Original Chinese Natural Language Inference},
 	author={Hai Hu and Kyle Richardson and Liang Xu and Lu Li and Sandra Kuebler and Larry Moss},
 	booktitle={Findings of EMNLP},
-	year={2020}
+	year={2020},
+	url={https://arxiv.org/abs/2010.05444}
 }
 ```
