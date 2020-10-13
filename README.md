@@ -41,10 +41,16 @@ You will only need `sentence1`, `sentence2` and `label` to train and evaluate.
 
 ## Data split
 
-We provide two training sets: 1) OCNLI.train with roughly 50k data points, 2) OCNLI.train.small which is a filtered subset of OCNLI.train with 30k data points.
-We wanted to see the effect of training size and overlapping premises on the results. See our paper for details.
+We provide four training sets: 
 
-Both training sets should be validated on the same dev and test sets.
+1. OCNLI.train: 50k data points
+2. OCNLI.train.small: filtered subset of OCNLI.train with 30k data points. 
+3. OCNLI.train.10k: 10k data points sampled from OCNLI.train.small
+4. OCNLI.train.3k: 3k data points sampled from OCNLI.train.small. 
+
+We wanted to see the effect of training size and overlapping premises on the results. The results trained with the first two training sets are reported in our [paper](https://arxiv.org/abs/2010.05444), along with the details about the splits. The last two sets are intended to mimic situations where annotated data are limited. 
+
+All training sets should be validated on the same dev and test sets.
 
 ## Leaderboard
 
