@@ -52,10 +52,12 @@ We wanted to see the effect of training size and overlapping premises on the res
 
 All training sets should be validated on the same dev and test sets.
 
-## Leaderboard
+## Leaderboard 排行榜
 
 OCNLI is part of the CLUE benchmark, which will hold a leaderboard [here](https://www.cluebenchmarks.com/nli.html).
 You can submit your results on the test set there. 
+
+注：提交格式：提交一个zip压缩包。里面需要包含如下文件： OCNLI_50k.json, OCNLI_30k.json
 
 ## Baselines Models (quick start)
 
