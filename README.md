@@ -88,6 +88,20 @@ deviation).
 | dev  | 58.7 (0.3) | 72.6 (0.9) | 77.4 (1.0) | na |
 | test | 57.0 (0.9) | 70.3 (0.9) | 76.4 (1.2) | 90.3 |
 
+- trained with **OCNLI.train.small = 10k data points**
+
+| validation data | BERT | RoBERTa | human | 
+|:--:|:--:|:--:|:--:|
+| dev  | 69.2 (0.5) | 75.2 (0.3) | na |
+| test | . (.) | . (.) | 90.3 |
+
+- trained with **OCNLI.train.small = 3k data points**
+
+| validation data | BERT | RoBERTa | human | 
+|:--:|:--:|:--:|:--:|
+| dev  | 64.4 (0.7) | 70.4 (0.6) | na |
+| test | .. (.) | . (.) | 90.3 |
+
 ## More details about OCNLI
 
 - OCNLI is collected using an **enhanced SNLI/MNLI procedure** where the biggest difference is that
