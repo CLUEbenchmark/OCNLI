@@ -93,14 +93,14 @@ deviation).
 | validation data | BERT | RoBERTa | human | 
 |:--:|:--:|:--:|:--:|
 | dev  | 69.2 (0.5) | 75.2 (0.3) | na |
-| test | . (.) | . (.) | 90.3 |
+| test | 67.0 (0.6) | 73.6 (0.5) | 90.3 |
 
 - trained with **OCNLI.train.small = 3k data points**
 
 | validation data | BERT | RoBERTa | human | 
 |:--:|:--:|:--:|:--:|
 | dev  | 64.4 (0.7) | 70.4 (0.6) | na |
-| test | .. (.) | . (.) | 90.3 |
+| test | 62.8 (0.7) | 69.5 (0.5) | 90.3 |
 
 ## More details about OCNLI
 
