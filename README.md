@@ -74,7 +74,7 @@ Please refer to https://github.com/CLUEbenchmark/OCNLI/blob/main/rep_baseline.md
 - trained with **OCNLI.train = 50k data points**
 
 Accuracy on *dev* / *test* sets: mean accuracy across 5 runs (standard
-deviation).
+deviation). BERT: BERT_base, RoBERTa: RoBERTa_large_wwm. Check more details on the paper.
 
 | validation data | majority | CBOW | BiLSTM | ESIM | BERT | RoBERTa | human | 
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
